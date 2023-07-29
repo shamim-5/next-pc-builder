@@ -2,3 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply h-full;
+}
+
+body {
+  @apply h-full overflow-x-hidden m-0 p-0 font-sans;
+}
+
+#__next {
+  @apply h-full;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-[#1f2937] text-base font-normal;
+}
+
+@layer components {
+  .infoText {
+    @apply p-4 bg-gray-700/50 rounded-lg max-w-[300px];
+  }
+
+  .itemRow {
+    @apply rounded-lg px-5 py-3 text-sm flex items-center justify-center space-x-2 hover:bg-gray-700/70 cursor-pointer text-gray-300 transition-all duration-200 ease-out;
+  }
+}
