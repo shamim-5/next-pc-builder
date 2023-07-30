@@ -1,6 +1,8 @@
-import Page from "@/components/Page";
+import RootLayout from "@/components/Layouts/RootLayout";
+import Product from "@/components/Products/Product";
 import { getProducts } from "@/lib/products";
-import { Button } from "antd";
+import dynamic from "next/dynamic";
+import Head from "next/head";
 
 export async function getStaticProps() {
   console.log("[HomePage] getStaticProps()");
@@ -15,19 +17,30 @@ export async function getStaticProps() {
 function HomePage({ products }) {
   console.log("[HomePage] render:", products);
 
-  return (
-    <Page title="Dynamic Title">
-      {/* antd and tailwindcss check */}
-      <Button className="text-red-900" type="primary">
-        Test Style
-      </Button>
+  const DynamicPage = dynamic(() => import("@/components/Layouts/Page"), {
+    loading: () => <h1>Loading...</h1>,
+    ssr: false,
+  });
 
-      <h1 className="text-red-900 ">Hello H1</h1>
-      <h4 className="text-3xl font-semibold">Hello H4</h4>
-      {/* faced data passed throw as children in Page component where set Head title and Page header and main content  */}
-      {/* {products} */}
-    </Page>
+  return (
+    <>
+      <Head>
+        <title>Next_PC-Builder</title>
+        <meta name="description" content="This is pc-builder website made by next-js" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <DynamicPage title="Next_PC-Builder">
+        {products.map((product) => (
+          <Product product={product} key={product.id} />
+        ))}
+      </DynamicPage>
+    </>
   );
 }
 
 export default HomePage;
+
+HomePage.getLayout = function getLayout(page) {
+  return <RootLayout>{page}</RootLayout>;
+};
