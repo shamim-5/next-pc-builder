@@ -1,4 +1,4 @@
-import { Dropdown, Layout, Menu, Space } from "antd";
+import { Button, Dropdown, Layout, Menu, Space } from "antd";
 import { MenuFoldOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import Link from "next/link";
@@ -46,8 +46,19 @@ const RootLayout = ({ children }) => {
           </div>
           <div>
             <h2 className="text-2xl font-mono  ml-1">
-              <Link href={"/"}>Next PC Build</Link>
+              <Link href={"/"}>Next_PC-Builder</Link>
             </h2>
+          </div>
+          <div>
+            <Link href={"/pcBuilder"}>
+              <Button
+                className="text-blue-900/100 ml-3 lg:ml-1 px-2 uppercase font-serif font-extrabold  border border-l-0 rounded-tl-none border-r-0 rounded-br-none bg-slate-50/60 transition-colors duration-500"
+                type="primary"
+                ghost
+              >
+                PC Builder
+              </Button>
+            </Link>
           </div>
         </div>
 

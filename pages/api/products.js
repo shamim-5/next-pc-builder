@@ -19,6 +19,12 @@ async function run(req, res) {
       const products = await productCollection.find({}).toArray();
       res.send({ message: "success", status: 200, data: products });
     }
+
+    if (req.method === "POST") {
+      const product = req.body;
+      const result = await productCollection.insertOne(product);
+      res.json(result);
+    }
   } finally {
     //  await client.close();
   }

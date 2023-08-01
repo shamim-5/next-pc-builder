@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 
 export async function getStaticProps() {
-  console.log("[HomePage] getStaticProps()");
+  // console.log("[HomePage] getStaticProps()");
   const products = await getProducts();
 
   return {
@@ -15,7 +15,7 @@ export async function getStaticProps() {
 }
 
 function HomePage({ products }) {
-  console.log("[HomePage] render:", products);
+  // console.log("[HomePage] render:", products);
 
   const DynamicPage = dynamic(() => import("@/components/Layouts/Page"), {
     loading: () => <h1>Loading...</h1>,
@@ -32,7 +32,7 @@ function HomePage({ products }) {
       </Head>
       <DynamicPage title="Next_PC-Builder">
         {products.map((product) => (
-          <Product product={product} key={product.id} />
+          <Product product={product} key={product._id} />
         ))}
       </DynamicPage>
     </>

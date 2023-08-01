@@ -1,0 +1,509 @@
+{
+  "products": [
+    {
+      "_id": "1",
+      "category": "CPU / Processor",
+      "description": "Explore our high-performance CPUs for seamless computing.",
+      "product_name": "High-Performance CPU",
+      "price": "$219.99",
+      "status": "In Stock",
+      "rating": 4.6,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/desktop-pc/brand-pc/dell/vostro-3888mt/vostro-3888mt-01-500x500-500x500.webp",
+      "products": [
+        {
+          "_id": "101",
+          "product_name": "High-Performance CPU 1",
+          "price": "$199.99",
+          "status": "In Stock",
+          "rating": 4.5,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/pentium-gold-g6405/pentium-gold-g6405-01-500x500.webp"
+        },
+        {
+          "_id": "102",
+          "product_name": "High-Performance CPU 2",
+          "price": "$189.99",
+          "status": "Out of Stock",
+          "rating": 4.2,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/pentium-gold-g6405/pentium-gold-g6405-01-500x500.webp"
+        },
+        {
+          "_id": "103",
+          "product_name": "High-Performance CPU 3",
+          "price": "$209.99",
+          "status": "In Stock",
+          "rating": 4.7,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/pentium-gold-g6405/pentium-gold-g6405-01-500x500.webp"
+        },
+        {
+          "_id": "104",
+          "product_name": "High-Performance CPU 4",
+          "price": "$179.99",
+          "status": "In Stock",
+          "rating": 4.3,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/pentium-gold-g6405/pentium-gold-g6405-01-500x500.webp"
+        },
+        {
+          "_id": "105",
+          "product_name": "High-Performance CPU 5",
+          "price": "$249.99",
+          "status": "Out of Stock",
+          "rating": 4.1,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/pentium-gold-g6405/pentium-gold-g6405-01-500x500.webp"
+        },
+        {
+          "_id": "106",
+          "product_name": "High-Performance CPU 6",
+          "price": "$219.99",
+          "status": "In Stock",
+          "rating": 4.6,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/pentium-gold-g6405/pentium-gold-g6405-01-500x500.webp"
+        }
+      ]
+    },
+    {
+      "_id": "2",
+      "category": "Motherboard",
+      "description": "Discover the latest motherboards with cutting-edge features.",
+      "product_name": "Advanced Motherboard",
+      "price": "$219.99",
+      "status": "In Stock",
+      "rating": 4.7,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/motherboard/asrock/h81m-vg4-r4-0/h81m-vg4-r4-0-01-500x500.jpg",
+      "products": [
+        {
+          "_id": "201",
+          "product_name": "Advanced Motherboard 1",
+          "price": "$179.99",
+          "status": "In Stock",
+          "rating": 4.8,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/Motherboard/Gigabyte/Gigabyte%20GA-H110M%20S2PH-DDR4-500x500.jpg"
+        },
+        {
+          "_id": "202",
+          "product_name": "Advanced Motherboard 2",
+          "price": "$169.99",
+          "status": "In Stock",
+          "rating": 4.6,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/Motherboard/Gigabyte/Gigabyte%20GA-H110M%20S2PH-DDR4-500x500.jpg"
+        },
+        {
+          "_id": "203",
+          "product_name": "Advanced Motherboard 3",
+          "price": "$189.99",
+          "status": "Out of Stock",
+          "rating": 4.5,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/Motherboard/Gigabyte/Gigabyte%20GA-H110M%20S2PH-DDR4-500x500.jpg"
+        },
+        {
+          "_id": "204",
+          "product_name": "Advanced Motherboard 4",
+          "price": "$199.99",
+          "status": "In Stock",
+          "rating": 4.3,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/Motherboard/Gigabyte/Gigabyte%20GA-H110M%20S2PH-DDR4-500x500.jpg"
+        },
+        {
+          "_id": "205",
+          "product_name": "Advanced Motherboard 5",
+          "price": "$209.99",
+          "status": "Out of Stock",
+          "rating": 4.0,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/Motherboard/Gigabyte/Gigabyte%20GA-H110M%20S2PH-DDR4-500x500.jpg"
+        },
+        {
+          "_id": "206",
+          "product_name": "Advanced Motherboard 6",
+          "price": "$219.99",
+          "status": "In Stock",
+          "rating": 4.7,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/Motherboard/Gigabyte/Gigabyte%20GA-H110M%20S2PH-DDR4-500x500.jpg"
+        }
+      ]
+    },
+    {
+      "_id": "3",
+      "category": "RAM",
+      "description": "Upgrade your system's memory with our high-speed RAM modules.",
+      "product_name": "High-Speed RAM",
+      "price": "$119.99",
+      "status": "In Stock",
+      "rating": 4.6,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/ram/team/elite-8g-3200/elite-8g-500x500.jpg",
+      "products": [
+        {
+          "_id": "301",
+          "product_name": "High-Speed RAM 1",
+          "price": "$89.99",
+          "status": "In Stock",
+          "rating": 4.2,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/ram/lexar/16gb-ddr4-3200mhz/16gb-ddr4-3200mhz-01-500x500.webp"
+        },
+        {
+          "_id": "302",
+          "product_name": "High-Speed RAM 2",
+          "price": "$79.99",
+          "status": "Out of Stock",
+          "rating": 4.0,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/ram/lexar/16gb-ddr4-3200mhz/16gb-ddr4-3200mhz-01-500x500.webp"
+        },
+        {
+          "_id": "303",
+          "product_name": "High-Speed RAM 3",
+          "price": "$99.99",
+          "status": "In Stock",
+          "rating": 4.5,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/ram/lexar/16gb-ddr4-3200mhz/16gb-ddr4-3200mhz-01-500x500.webp"
+        },
+        {
+          "_id": "304",
+          "product_name": "High-Speed RAM 4",
+          "price": "$109.99",
+          "status": "In Stock",
+          "rating": 4.3,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/ram/lexar/16gb-ddr4-3200mhz/16gb-ddr4-3200mhz-01-500x500.webp"
+        },
+        {
+          "_id": "305",
+          "product_name": "High-Speed RAM 5",
+          "price": "$89.99",
+          "status": "Out of Stock",
+          "rating": 4.1,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/ram/lexar/16gb-ddr4-3200mhz/16gb-ddr4-3200mhz-01-500x500.webp"
+        },
+        {
+          "_id": "306",
+          "product_name": "High-Speed RAM 6",
+          "price": "$119.99",
+          "status": "In Stock",
+          "rating": 4.6,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/ram/lexar/16gb-ddr4-3200mhz/16gb-ddr4-3200mhz-01-500x500.webp"
+        }
+      ]
+    },
+    {
+      "_id": "4",
+      "category": "Power Supply Unit",
+      "description": "Ensure stable power delivery with our reliable PSUs.",
+      "product_name": "Reliable PSU",
+      "price": "$179.99",
+      "status": "In Stock",
+      "rating": 4.9,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/power-supply/Antec/neoeco-gold-850w/neoeco-gold-850w-01-500x500.webp",
+      "products": [
+        {
+          "_id": "401",
+          "product_name": "Reliable PSU 1",
+          "price": "$129.99",
+          "status": "In Stock",
+          "rating": 4.6,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/pm850d/pm850d-01-228x228.webp"
+        },
+        {
+          "_id": "402",
+          "product_name": "Reliable PSU 2",
+          "price": "$139.99",
+          "status": "Out of Stock",
+          "rating": 4.4,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/pm850d/pm850d-01-228x228.webp"
+        },
+        {
+          "_id": "403",
+          "product_name": "Reliable PSU 3",
+          "price": "$149.99",
+          "status": "In Stock",
+          "rating": 4.8,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/pm850d/pm850d-01-228x228.webp"
+        },
+        {
+          "_id": "404",
+          "product_name": "Reliable PSU 4",
+          "price": "$159.99",
+          "status": "In Stock",
+          "rating": 4.7,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/pm850d/pm850d-01-228x228.webp"
+        },
+        {
+          "_id": "405",
+          "product_name": "Reliable PSU 5",
+          "price": "$169.99",
+          "status": "Out of Stock",
+          "rating": 4.3,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/pm850d/pm850d-01-228x228.webp"
+        },
+        {
+          "_id": "406",
+          "product_name": "Reliable PSU 6",
+          "price": "$179.99",
+          "status": "In Stock",
+          "rating": 4.9,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/power-supply/deepcool/pm850d/pm850d-01-228x228.webp"
+        }
+      ]
+    },
+    {
+      "_id": "5",
+      "category": "Storage Device",
+      "description": "Store more with our fast and spacious storage solutions.",
+      "product_name": "Spacious Storage",
+      "price": "$179.99",
+      "status": "In Stock",
+      "rating": 4.7,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/ssd/twinmos/128gb-m-2-2280-sataiii-ssd/128gb-m-2-2280-sataiii-ssd-01-228x228.webp",
+      "products": [
+        {
+          "_id": "501",
+          "product_name": "Spacious Storage 1",
+          "price": "$149.99",
+          "status": "In Stock",
+          "rating": 4.4,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/ssd/samsung/pm9a1/pm9a1-01-228x228.webp"
+        },
+        {
+          "_id": "502",
+          "product_name": "Spacious Storage 2",
+          "price": "$159.99",
+          "status": "In Stock",
+          "rating": 4.2,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/ssd/samsung/pm9a1/pm9a1-01-228x228.webp"
+        },
+        {
+          "_id": "503",
+          "product_name": "Spacious Storage 3",
+          "price": "$169.99",
+          "status": "Out of Stock",
+          "rating": 4.1,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/ssd/samsung/pm9a1/pm9a1-01-228x228.webp"
+        },
+        {
+          "_id": "504",
+          "product_name": "Spacious Storage 4",
+          "price": "$179.99",
+          "status": "In Stock",
+          "rating": 4.7,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/ssd/samsung/pm9a1/pm9a1-01-228x228.webp"
+        },
+        {
+          "_id": "505",
+          "product_name": "Spacious Storage 5",
+          "price": "$189.99",
+          "status": "Out of Stock",
+          "rating": 4.5,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/ssd/samsung/pm9a1/pm9a1-01-228x228.webp"
+        },
+        {
+          "_id": "506",
+          "product_name": "Spacious Storage 6",
+          "price": "$199.99",
+          "status": "In Stock",
+          "rating": 4.3,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/ssd/samsung/pm9a1/pm9a1-01-228x228.webp"
+        }
+      ]
+    },
+    {
+      "_id": "6",
+      "category": "Monitor",
+      "description": "Experience stunning visuals with our top-notch monitors.",
+      "product_name": "Stunning Monitor 4",
+      "price": "$379.99",
+      "status": "In Stock",
+      "rating": 4.8,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/monitor/msi/pro-mp241x/pro-mp241x-0001-228x228.png",
+      "products": [
+        {
+          "_id": "601",
+          "product_name": "Stunning Monitor 1",
+          "price": "$299.99",
+          "status": "In Stock",
+          "rating": 4.9,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/monitor/xiaomi/redmi-display-1a/redmi-display-1a-1-228x228.jpg"
+        },
+        {
+          "_id": "602",
+          "product_name": "Stunning Monitor 2",
+          "price": "$319.99",
+          "status": "In Stock",
+          "rating": 4.7,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/monitor/xiaomi/redmi-display-1a/redmi-display-1a-1-228x228.jpg"
+        },
+        {
+          "_id": "603",
+          "product_name": "Stunning Monitor 3",
+          "price": "$349.99",
+          "status": "Out of Stock",
+          "rating": 4.5,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/monitor/xiaomi/redmi-display-1a/redmi-display-1a-1-228x228.jpg"
+        },
+        {
+          "_id": "604",
+          "product_name": "Stunning Monitor 4",
+          "price": "$379.99",
+          "status": "In Stock",
+          "rating": 4.8,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/monitor/xiaomi/redmi-display-1a/redmi-display-1a-1-228x228.jpg"
+        },
+        {
+          "_id": "605",
+          "product_name": "Stunning Monitor 5",
+          "price": "$399.99",
+          "status": "Out of Stock",
+          "rating": 4.6,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/monitor/xiaomi/redmi-display-1a/redmi-display-1a-1-228x228.jpg"
+        },
+        {
+          "_id": "606",
+          "product_name": "Stunning Monitor 6",
+          "price": "$429.99",
+          "status": "In Stock",
+          "rating": 4.4,
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/monitor/xiaomi/redmi-display-1a/redmi-display-1a-1-228x228.jpg"
+        }
+      ]
+    },
+    {
+      "_id": "7",
+      "category": "Others",
+      "description": "Explore our wide range of other products, including GPU, Mouse, Keyboard, and more.",
+      "product_name": "Professional GPU",
+      "price": "$899.99",
+      "status": "In Stock",
+      "rating": 4.8,
+      "image_url": "https://www.startech.com.bd/image/cache/catalog/Accessories/Logitech/Keyboard/mk540/mk540-228x228.webp",
+      "products": [],
+      "accessories": [
+        {
+          "_id": "701",
+          "category_name": "GPU",
+          "description": "Discover our high-performance GPUs for gaming and professional use.",
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/graphics-card/afox/radeon-rx-550/radeon-rx-550-01-228x228.jpg",
+          "items": [
+            {
+              "id": "7011",
+              "image_url": "https://www.startech.com.bd/image/cache/catalog/graphics-card/msi/rtx-3060-gaming-x/rtx-3060-gaming-x-01-228x228.jpg",
+              "product_name": "High-Performance GPU 1",
+              "category": "GPU",
+              "price": "$399.99",
+              "status": "In Stock",
+              "rating": 4.7
+            },
+            {
+              "id": "7012",
+              "image_url": "https://www.startech.com.bd/image/cache/catalog/graphics-card/msi/rtx-3060-gaming-x/rtx-3060-gaming-x-01-228x228.jpg",
+              "product_name": "Advanced Gaming GPU 2",
+              "category": "GPU",
+              "price": "$499.99",
+              "status": "Out of Stock",
+              "rating": 4.5
+            },
+            {
+              "id": "7013",
+              "image_url": "https://www.startech.com.bd/image/cache/catalog/graphics-card/msi/rtx-3060-gaming-x/rtx-3060-gaming-x-01-228x228.jpg",
+              "product_name": "Professional GPU 3",
+              "category": "GPU",
+              "price": "$899.99",
+              "status": "In Stock",
+              "rating": 4.8
+            },
+            {
+              "id": "7014",
+              "image_url": "https://www.startech.com.bd/image/cache/catalog/graphics-card/msi/rtx-3060-gaming-x/rtx-3060-gaming-x-01-228x228.jpg",
+              "product_name": "Budget GPU 4",
+              "category": "GPU",
+              "price": "$199.99",
+              "status": "In Stock",
+              "rating": 4.2
+            }
+          ]
+        },
+        {
+          "_id": "702",
+          "category_name": "Mouse",
+          "description": "Explore our advanced gaming mice designed for precision and comfort.",
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/mouse/rapoo/mt550/mt550-500x500.jpg",
+          "items": [
+            {
+              "id": "7021",
+              "image_url": "https://www.startech.com.bd/image/cache/catalog/mouse/logitech/g304/g304-01-228x228.jpg",
+              "product_name": "Advanced Gaming Mouse 1",
+              "category": "Mouse",
+              "price": "$79.99",
+              "status": "In Stock",
+              "rating": 4.5
+            },
+            {
+              "id": "7022",
+              "image_url": "https://www.startech.com.bd/image/cache/catalog/mouse/logitech/g304/g304-01-228x228.jpg",
+              "product_name": "Ergonomic Mouse 2",
+              "category": "Mouse",
+              "price": "$49.99",
+              "status": "In Stock",
+              "rating": 4.3
+            },
+            {
+              "id": "7023",
+              "image_url": "https://www.startech.com.bd/image/cache/catalog/mouse/logitech/g304/g304-01-228x228.jpg",
+              "product_name": "Wireless Gaming Mouse 3",
+              "category": "Mouse",
+              "price": "$89.99",
+              "status": "Out of Stock",
+              "rating": 4.6
+            },
+            {
+              "id": "7024",
+              "image_url": "https://www.startech.com.bd/image/cache/catalog/mouse/logitech/g304/g304-01-228x228.jpg",
+              "product_name": "RGB Mouse 4",
+              "category": "Mouse",
+              "price": "$69.99",
+              "status": "In Stock",
+              "rating": 4.1
+            }
+          ]
+        },
+        {
+          "_id": "703",
+          "category_name": "Keyboard",
+          "description": "Browse our mechanical gaming keyboards with customizable RGB lighting.",
+          "image_url": "https://www.startech.com.bd/image/cache/catalog/keyboard/thunderobot/k98/k98-cedar-01-228x228.webp",
+          "items": [
+            {
+              "id": "7031",
+              "image_url": "https://www.startech.com.bd/image/cache/catalog/keyboard/thunderobot/k98/k98-ebony-on-cedar-01-228x228.webp",
+              "product_name": "Mechanical Gaming Keyboard 1",
+              "category": "Keyboard",
+              "price": "$129.99",
+              "status": "Out of Stock",
+              "rating": 4.4
+            },
+            {
+              "id": "7032",
+              "image_url": "https://www.startech.com.bd/image/cache/catalog/keyboard/thunderobot/k98/k98-ebony-on-cedar-01-228x228.webp",
+              "product_name": "RGB Mechanical Keyboard 2",
+              "category": "Keyboard",
+              "price": "$159.99",
+              "status": "In Stock",
+              "rating": 4.6
+            },
+            {
+              "id": "7033",
+              "image_url": "https://www.startech.com.bd/image/cache/catalog/keyboard/thunderobot/k98/k98-ebony-on-cedar-01-228x228.webp",
+              "product_name": "Wireless Gaming Keyboard 3",
+              "category": "Keyboard",
+              "price": "$179.99",
+              "status": "In Stock",
+              "rating": 4.7
+            },
+            {
+              "id": "7034",
+              "image_url": "https://www.startech.com.bd/image/cache/catalog/keyboard/thunderobot/k98/k98-ebony-on-cedar-01-228x228.webp",
+              "product_name": "Compact Mechanical Keyboard 4",
+              "category": "Keyboard",
+              "price": "$99.99",
+              "status": "Out of Stock",
+              "rating": 4.2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

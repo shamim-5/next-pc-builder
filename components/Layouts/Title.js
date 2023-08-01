@@ -1,6 +1,6 @@
-function Title({ children }) {
+function Title({ children, titleStyle }) {
    return (
-      <h1 className="text-2xl">
+      <h1 className={titleStyle}>
          {children}
       </h1>
    )
