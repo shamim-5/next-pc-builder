@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 
 export async function getStaticProps() {
-  // console.log("[HomePage] getStaticProps()");
+  console.log("[HomePage] getStaticProps()");
   const products = await getProducts();
 
   return {

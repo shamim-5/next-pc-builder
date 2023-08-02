@@ -50,7 +50,7 @@ const RootLayout = ({ children }) => {
             </h2>
           </div>
           <div>
-            <Link href={"/pcBuilder"}>
+            <Link href={"/pc-builder"}>
               <Button
                 className="text-blue-900/100 ml-3 lg:ml-1 px-2 uppercase font-serif font-extrabold  border border-l-0 rounded-tl-none border-r-0 rounded-br-none bg-slate-50/60 transition-colors duration-500"
                 type="primary"

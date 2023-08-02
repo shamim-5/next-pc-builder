@@ -1,9 +1,11 @@
 import RootLayout from "@/components/Layouts/RootLayout";
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from "@ant-design/icons";
 import { Button, Card } from "antd";
 import Title from "@/components/Layouts/Title";
 import Image from "next/image";
 import { getProduct, getProducts } from "@/lib/products";
+import Head from "next/head";
+import Link from "next/link";
+import { useTableContext } from "@/contexts/TableContext";
 
 export async function getStaticPaths() {
   const products = await getProducts();
@@ -37,59 +39,74 @@ export async function getStaticProps({ params: { id } }) {
 function ProductPage({ product }) {
   const { category, description, image_url, product_name, price, status, rating, products } = product;
 
+  const { tableQuantity, updateQuantity } = useTableContext();
+
+  // update pc-builder page ProductTable.js quantity field using react context
+  const handleUpdateQuantity = (productId, quantity) => {
+    const updatedQuantity = (quantity || 0) + 1;
+
+    updateQuantity(productId, updatedQuantity);
+  };
+
   return (
-    <div className="h-auto px-6 lg:px-12 mx-1">
-      <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center">
-        <Card
-          className="my-6"
-          style={{
-            width: 300,
-          }}
-          cover={<Image src={image_url} alt="product-details" width={340} height={340} />}
-        ></Card>
-        <div className="lg:flex-1 mt-6">
-          <Title titleStyle="text-3xl font-semibold font-mono">Product Details</Title>
-          <h2 className="text-xl font-semibold text-slate-900/100">Category: {category}</h2>
-          <h3 className="text-lg font-semibold text-slate-900/100">Product_name: {product_name}</h3>
-          <p className="text-base font-semibold text-slate-900/80">Description: {description}</p>
-          <p className="text-base font-semibold text-slate-900/90">Status: {status}</p>
-          <p className="text-base font-semibold text-slate-900/90">Price: {price}</p>
-          <p className="text-base font-semibold text-slate-900/90">Rating: {rating}</p>
-          <Button
-            className="text-blue-900/100 ml-3 lg:ml-1 px-2 uppercase font-serif font-extrabold  border border-l-0 rounded-tl-none border-r-0 rounded-br-none bg-slate-50/60 transition-colors duration-500 w-full"
-            type="primary"
-            ghost
-          >
-            Add To Cart
-          </Button>
+    <>
+      <Head>
+        <title>Product Details-Next_Pc-Builder</title>
+      </Head>
+      <div className="h-auto px-6 lg:px-12 mx-1">
+        <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center">
+          <Card
+            className="my-6"
+            style={{
+              width: 300,
+            }}
+            cover={<Image src={image_url} alt="product-details" width={340} height={340} />}
+          ></Card>
+          <div className="lg:flex-1 mt-6">
+            <Title titleStyle="text-3xl font-semibold font-mono">Product Details</Title>
+            <h2 className="text-xl font-semibold text-slate-900/100">Category: {category}</h2>
+            <h3 className="text-lg font-semibold text-slate-900/100">Product_name: {product_name}</h3>
+            <p className="text-base font-semibold text-slate-900/80">Description: {description}</p>
+            <p className="text-base font-semibold text-slate-900/90">Status: {status}</p>
+            <p className="text-base font-semibold text-slate-900/90">Price: {price}</p>
+            <p className="text-base font-semibold text-slate-900/90">Rating: {rating}</p>
+            <Link href={`/pc-builder`}>
+              <Button
+                onClick={() => handleUpdateQuantity(`${product._id}`, tableQuantity[product._id] || 0)}
+                className="text-blue-900/100 ml-3 lg:ml-1 px-2 uppercase font-serif font-extrabold  border border-l-0 rounded-tl-none border-r-0 rounded-br-none bg-slate-50/60 transition-colors duration-500 w-full"
+                type="primary"
+                ghost
+              >
+                Add To Cart
+              </Button>
+            </Link>
+          </div>
+        </div>
+        <Title titleStyle="text-4xl my-6">Featured Category</Title>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 mb-12 justify-items-center">
+          {products.map((product) => {
+            const { image_url, product_name, price, status, rating } = product;
+            return (
+              <div key={product._id}>
+                <Card
+                  style={{
+                    width: 300,
+                  }}
+                  cover={<Image src={image_url} alt="product-details" width={340} height={340} />}
+                >
+                  <h2>{product_name}</h2>
+                  <p>{status}</p>
+                  <span className="flex justify-between m-0">
+                    <p className="m-0 font-bold">Price: {price}</p>
+                    <p className="m-0 font-semibold text-orange-600">Rating: {rating}</p>
+                  </span>
+                </Card>
+              </div>
+            );
+          })}
         </div>
       </div>
-
-      <Title titleStyle="text-4xl my-6">Featured Category</Title>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 mb-12 justify-items-center">
-        {products.map((product) => {
-          const { image_url, product_name, price, status, rating } = product;
-
-          return (
-            <div key={product._id}>
-              <Card
-                style={{
-                  width: 300,
-                }}
-                cover={<Image src={image_url} alt="product-details" width={340} height={340} />}
-              >
-                <h2>{product_name}</h2>
-                <p>{status}</p>
-                <span className="flex justify-between m-0">
-                  <p className="m-0 font-bold">Price: {price}</p>
-                  <p className="m-0 font-semibold text-orange-600">Rating: {rating}</p>
-                </span>
-              </Card>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+    </>
   );
 }
 export default ProductPage;
