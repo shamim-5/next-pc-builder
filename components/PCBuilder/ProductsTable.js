@@ -1,6 +1,7 @@
 import { useTableContext } from "@/contexts/TableContext";
 import { Button, Popconfirm, Table } from "antd";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const defaultFooter = (record) => {
   let totalPriceSum = 0;
@@ -15,7 +16,9 @@ const defaultFooter = (record) => {
       break; // No need to continue checking once we find a quantity not equal to 1
     }
   }
+
   // console.log(allQuantitiesZero);
+  // console.log(record);
   return (
     <div className="flex flex-col items-end">
       <h3 className="text-2xl font-semibold">
@@ -120,12 +123,16 @@ function ProductsTable({ products }) {
     footer: defaultFooter,
   };
 
-  console.log(tableQuantity, updatedProducts);
+  useEffect(() => {
+    setDataSource([...updatedProducts]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
+  console.log(tableQuantity, updatedProducts);
   return (
     <>
       <div>
-        <Table {...tableProps} pagination={false} columns={columns} dataSource={updatedProducts} />
+        <Table {...tableProps} pagination={false} columns={columns} dataSource={dataSource} />
       </div>
     </>
   );

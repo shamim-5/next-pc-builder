@@ -40,12 +40,25 @@ function ProductPage({ product }) {
   const { category, description, image_url, product_name, price, status, rating, products } = product;
 
   const { tableQuantity, updateQuantity } = useTableContext();
+  const { dataSource, setDataSource } = useTableContext();
+
+  const updatedProducts = (dataSource.length ? dataSource : products).map((product) => ({
+    key: product._id.toString(),
+    _id: product._id.toString(),
+    product_name: product.product_name,
+    category: product.category,
+    status: product.status,
+    quantity: tableQuantity[product._id] || 0,
+    price: product.price,
+    totalPrice: "$" + parseFloat(tableQuantity[product._id] || 0) * parseFloat(product.price.slice(1)),
+  }));
 
   // update pc-builder page ProductTable.js quantity field using react context
   const handleUpdateQuantity = (productId, quantity) => {
     const updatedQuantity = (quantity || 0) + 1;
 
     updateQuantity(productId, updatedQuantity);
+    setDataSource([...updatedProducts])
   };
 
   return (
@@ -86,6 +99,21 @@ function ProductPage({ product }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 mb-12 justify-items-center">
           {products.map((product) => {
             const { image_url, product_name, price, status, rating } = product;
+            const newData = {
+              key: product._id.toString(),
+              _id: product._id.toString(),
+              product_name: product.product_name,
+              category: product.category,
+              status: product.status,
+              quantity: tableQuantity[product._id] || 0,
+              price: product.price,
+              totalPrice: "$" + parseFloat(tableQuantity[product._id] || 0) * parseFloat(product.price.slice(1)),
+            };
+
+            const handleDataSource = () => {
+              setDataSource([...updatedProducts, { ...newData }]);
+            };
+
             return (
               <div key={product._id}>
                 <Card
@@ -103,7 +131,9 @@ function ProductPage({ product }) {
                   </span>
                   <Link href={`/pc-builder`}>
                     <Button
-                      onClick={() => handleUpdateQuantity(`${product._id}`, tableQuantity[product._id] || 0)}
+                      onClick={() =>
+                        handleUpdateQuantity(`${product._id}`, tableQuantity[product._id] || 0) || handleDataSource()
+                      }
                       className="text-blue-900/100 ml-3 lg:ml-1 px-2 uppercase font-serif font-extrabold  border border-l-0 rounded-tl-none border-r-0 rounded-br-none bg-slate-50/60 transition-colors duration-500 w-full"
                       type="primary"
                       ghost
