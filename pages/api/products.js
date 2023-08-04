@@ -15,7 +15,14 @@ async function run(req, res) {
     await client.connect();
     const productCollection = client.db("next_pc_builder").collection("products");
 
+    // console.log(req.query);
     if (req.method === "GET") {
+      const { _id } = req.query;
+      if (_id) {
+        const product = await productCollection.findOne({ _id: _id });
+        res.status(200).send(product);
+      }
+
       const products = await productCollection.find({}).toArray();
       res.send({ message: "success", status: 200, data: products });
     }
