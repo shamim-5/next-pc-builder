@@ -60,7 +60,7 @@ function ProductPage({ product }) {
             style={{
               width: 300,
             }}
-            cover={<Image src={image_url} alt="product-details" width={340} height={340} />}
+            cover={<Image src={image_url} alt="product-details" width={340} height={340} priority />}
           ></Card>
           <div className="lg:flex-1 mt-6">
             <Title titleStyle="text-3xl font-semibold font-mono">Product Details</Title>
@@ -77,7 +77,7 @@ function ProductPage({ product }) {
                 type="primary"
                 ghost
               >
-                Add To Cart
+                Add To Builder
               </Button>
             </Link>
           </div>
@@ -92,14 +92,25 @@ function ProductPage({ product }) {
                   style={{
                     width: 300,
                   }}
-                  cover={<Image src={image_url} alt="product-details" width={340} height={340} />}
+                  cover={<Image src={image_url} alt="product-details" width={340} height={340} priority />}
                 >
+                  <h2>{category}</h2>
                   <h2>{product_name}</h2>
                   <p>{status}</p>
                   <span className="flex justify-between m-0">
                     <p className="m-0 font-bold">Price: {price}</p>
                     <p className="m-0 font-semibold text-orange-600">Rating: {rating}</p>
                   </span>
+                  <Link href={`/pc-builder`}>
+                    <Button
+                      onClick={() => handleUpdateQuantity(`${product._id}`, tableQuantity[product._id] || 0)}
+                      className="text-blue-900/100 ml-3 lg:ml-1 px-2 uppercase font-serif font-extrabold  border border-l-0 rounded-tl-none border-r-0 rounded-br-none bg-slate-50/60 transition-colors duration-500 w-full"
+                      type="primary"
+                      ghost
+                    >
+                      Add To Builder
+                    </Button>
+                  </Link>
                 </Card>
               </div>
             );

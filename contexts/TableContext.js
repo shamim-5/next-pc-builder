@@ -8,6 +8,7 @@ export function useTableContext() {
 
 export function TableContextProvider({ children }) {
   const [tableQuantity, setTableQuantity] = useState({});
+  const [dataSource, setDataSource] = useState([]);
 
   const updateQuantity = (productId, quantity) => {
     setTableQuantity((prevQuantity) => ({
@@ -16,5 +17,9 @@ export function TableContextProvider({ children }) {
     }));
   };
 
-  return <TableContext.Provider value={{ tableQuantity, updateQuantity }}>{children}</TableContext.Provider>;
+  return (
+    <TableContext.Provider value={{ tableQuantity, updateQuantity, dataSource, setDataSource }}>
+      {children}
+    </TableContext.Provider>
+  );
 }

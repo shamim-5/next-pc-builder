@@ -7,7 +7,7 @@ import ProductsTable from "@/components/PCBuilder/ProductsTable";
 export async function getServerSideProps() {
   try {
     const products = await getProducts();
-    console.log("[ServerSideRender] getServerSideProps()");
+    // console.log("[ServerSideRender] getServerSideProps()");
 
     return {
       props: {
