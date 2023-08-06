@@ -40,31 +40,28 @@ function ProductPage({ product }) {
   const { category, description, image_url, product_name, price, status, rating, products } = product;
 
   const { tableQuantity, updateQuantity } = useTableContext();
-  const { dataSource, setDataSource } = useTableContext();
+  const { updateDataSource } = useTableContext();
 
-  console.log(product);
   const tableProductFormat = (product) => {
     return {
       key: product._id.toString(),
       _id: product._id.toString(),
       product_name: product.product_name,
-      category: product.category,
+      category: category,
       status: product.status,
       quantity: tableQuantity[product._id] || 0,
       price: product.price,
       totalPrice: "$" + parseFloat(tableQuantity[product._id] || 0) * parseFloat(product.price.slice(1)),
     };
   };
-  const updatedProducts = dataSource.length
-    ? dataSource.map((product) => tableProductFormat(product))
-    : [tableProductFormat(product)];
+  const updatedProducts = [tableProductFormat(product)];
 
   // update pc-builder page ProductTable.js quantity field using react context
   const handleUpdateQuantity = (productId, quantity) => {
     const updatedQuantity = (quantity || 0) + 1;
 
     updateQuantity(productId, updatedQuantity);
-    setDataSource([...updatedProducts]);
+    updateDataSource(updatedProducts);
   };
 
   return (
@@ -106,31 +103,29 @@ function ProductPage({ product }) {
           {products.map((product) => {
             const { image_url, product_name, price, status, rating } = product;
 
-            // console.log(product);
             const tableProductFormat = (product) => {
               return {
                 key: product._id.toString(),
                 _id: product._id.toString(),
                 product_name: product.product_name,
-                category: product.category,
+                category: category,
                 status: product.status,
                 quantity: tableQuantity[product._id] || 0,
                 price: product.price,
                 totalPrice: "$" + parseFloat(tableQuantity[product._id] || 0) * parseFloat(product.price.slice(1)),
               };
             };
-            const updatedProducts = dataSource.length
-              ? dataSource.map((product) => tableProductFormat(product))
-              : [tableProductFormat(product)];
+            const updatedProducts = [tableProductFormat(product)];
 
             // update pc-builder page ProductTable.js quantity field using react context
             const handleUpdateQuantity = (productId, quantity) => {
               const updatedQuantity = (quantity || 0) + 1;
 
               updateQuantity(productId, updatedQuantity);
-              setDataSource([...updatedProducts]);
+              updateDataSource(updatedProducts);
             };
 
+            // console.log(updatedProducts);
             return (
               <div key={product._id}>
                 <Card

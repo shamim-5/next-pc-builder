@@ -10,15 +10,13 @@ const defaultFooter = (record) => {
   for (const product of record) {
     const priceNumber = product.totalPrice ? parseFloat(product?.totalPrice.slice(1).replace(",", "")) : 0;
     totalPriceSum += priceNumber;
+    // console.log(totalPriceSum, record);
 
     if (product.quantity === 0 || record.length < 5) {
       allQuantitiesZero = true;
-      break; // No need to continue checking once we find a quantity not equal to 1
     }
   }
 
-  // console.log(allQuantitiesZero);
-  // console.log(record);
   return (
     <div className="flex flex-col items-end">
       <h3 className="text-2xl font-semibold">
@@ -93,10 +91,13 @@ function ProductsTable({ products }) {
       fixed: "right",
       width: 100,
       render: (_, record) => {
-        // console.log(record);
+        const keyValue = record.key;
+        const key = keyValue.charAt(0);
+
+        // console.log("[Formatted record.key :]", key);
         return (
           <>
-            <Link href={`/products/${record.key}`}>Choose</Link>
+            <Link href={`/products/${key}`}>Choose</Link>
           </>
         );
       },
@@ -128,7 +129,7 @@ function ProductsTable({ products }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(tableQuantity, updatedProducts);
+  // console.log(tableQuantity, dataSource);
   return (
     <>
       <div>
