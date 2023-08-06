@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "json-server": "json-server --watch next_pc_builder_db.json --port 5000",
+    "json-server": "json-server --watch ./json-server/next_pc_builder_db.json --routes ./json-server/routes.json --port 5000",
     "lint": "next lint"
   },
   "dependencies": {
